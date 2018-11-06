@@ -1,10 +1,12 @@
 const webpack = require('webpack')
 const config = require('../config')
+const path = require('path')
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
 }
 
-const config = {
+const WebpackConfig = {
+    context: path.resolve(__dirname, '../'),
     entry: {
         app: './src/main.js'
     },
@@ -44,4 +46,4 @@ const config = {
         ]
     }
 }
-module.exports = config
+module.exports = WebpackConfig
